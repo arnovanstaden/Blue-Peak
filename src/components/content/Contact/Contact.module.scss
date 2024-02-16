@@ -2,7 +2,7 @@
   .content {
     display: grid;
     grid-template-columns: 2fr 3fr;
-    gap: 24px;
+    gap: 48px;
 
     .details {
       display: flex;
@@ -19,6 +19,7 @@
           align-items: center;
           gap: 16px;
           transition: 0.3s ease-out;
+
           svg * {
             fill: var(--colour-primary);
           }

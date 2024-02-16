@@ -22,7 +22,7 @@
 
     &.variant-contained {
       background-color: var(--colour-font);
-      color: var(--colour-primary);
+      color: var(--colour-on-colour);
 
       &:hover {
         color: var(--colour-font);
@@ -38,18 +38,17 @@
     color: var(--colour-primary);
 
     &:hover {
-      border: 1px solid var(--colour-font);
+      border-color: var(--colour-font);
       color: var(--colour-font);
     }
 
     &.variant-contained {
       background-color: var(--colour-primary);
-      color: var(--colour-font);
+      color: var(--colour-on-colour);
 
       &:hover {
         background-color: var(--colour-font);
         border-color: var(--colour-font);
-        color: var(--colour-primary);
       }
     }
   }

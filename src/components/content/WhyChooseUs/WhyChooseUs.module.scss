@@ -1,0 +1,47 @@
+.WhyChooseUs {
+  .content {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 48px;
+
+    .left {
+      display: grid;
+      grid-template-rows: auto 1fr;
+      gap: 48px;
+
+      .image {
+        height: 100%;
+        width: 100%;
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 16px;
+      }
+    }
+
+    .grid {
+      display: grid;
+      gap: 16px;
+
+      .value {
+        background-color: var(--colour-container);
+        padding: 20px;
+        border-radius: 12px;
+
+        h3 {
+          font-weight: 500;
+          font-size: 16px;
+          margin-bottom: 12px;
+        }
+
+        p {
+          font-size: 14px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}

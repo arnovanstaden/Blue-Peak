@@ -10,5 +10,6 @@
       "@static/*": ["public/static/*"],
       "@styles/*": ["src/styles/*"]
     }
-  }
+  },
+  "exclude": ["node_modules", "build", "dist"]
 }

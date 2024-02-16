@@ -9,7 +9,7 @@ export default {
       },
     },
   ],
-  singleQuote: true,
+  singleQuote: false,
   htmlWhitespaceSensitivity: "ignore",
   printWidth: 'ignore'
 };
