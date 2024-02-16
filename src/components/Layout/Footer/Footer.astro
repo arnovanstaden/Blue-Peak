@@ -1,26 +1,43 @@
 ---
 import styles from './Footer.module.scss';
-
+import Container from '../../UI/Container/Container.astro';
+import InstagramIcon from '@static/icons/instagram.svg?raw';
+import FacebookIcon from '@static/icons/facebook.svg?raw';
+import TikTokIcon from '@static/icons/tiktok.svg?raw';
 ---
 
-<footer class={styles.Footer}>
-  <div class="left">
-  <a href="/">Home</a>
-  <a href="/services">Services</a>
-  <a href="/contact">Contact</a>
-  </div>
-  <p>
-    @2024 Blue Peak Plumbing & Gas
-  </p>
-  <div class="right">
-    <a href="https://www.instagram.com/bluepeak.plumbing.gas" target="_blank">
-      instagram
-    </a>
-    <a href="https://www.instagram.com/bluepeak.plumbing.gas" target="_blank">
-      tiktok
-    </a>
-    <a href="https://www.instagram.com/bluepeak.plumbing.gas" target="_blank">
-      facebook
-    </a>
-  </div>
+<footer>
+  <Container>
+    <div class={styles.Footer}>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/services">Services</a>
+        <a href="/contact">Contact</a>
+      </nav>
+      <p class={styles.copyright}>
+        @{new Date().getFullYear()} Blue Peak Plumbing & Gas. All rights reserved.
+      </p>
+      <div class={styles.social}>
+        <a
+          href="https://www.instagram.com/bluepeak.plumbing.gas"
+          target="_blank"
+        >
+          <!-- <img src="/static/icons/instagram.svg" alt="instagram" /> -->
+          <Fragment set:html={InstagramIcon} />
+        </a>
+        <a
+          href="https://www.instagram.com/bluepeak.plumbing.gas"
+          target="_blank"
+        >
+          <Fragment set:html={FacebookIcon} />
+        </a>
+        <a
+          href="https://www.instagram.com/bluepeak.plumbing.gas"
+          target="_blank"
+        >
+          <Fragment set:html={TikTokIcon} />
+        </a>
+      </div>
+    </div>
+  </Container>
 </footer>

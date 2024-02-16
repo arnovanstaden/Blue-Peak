@@ -2,11 +2,13 @@
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
     "jsx": "react-jsx",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "jsxImportSource": "react"
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "jsxImportSource": "react",
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@static/*": ["public/static/*"],
+      "@styles/*": ["src/styles/*"]
+    }
   }
 }

@@ -1,0 +1,19 @@
+:root {
+  --colour-white: #fbfbfb;
+  --colour-secondary: #eaeaea;
+  --colour-tertiary: #636777;
+  --colour-accent: #1c1e27;
+  --colour-primary: #2b5fae;
+
+  // Light mode
+  --font-color: var(--colour-accent);
+  --font-color-secondary: var(--colour-tertiary);
+  --color-background: var(--colour-white);
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    --font-color: var(--colour-white);
+    --color-background: var(--colour-accent);
+  }
+}

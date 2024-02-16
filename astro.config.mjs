@@ -7,5 +7,15 @@ export default defineConfig({
   server: {
     port: 3000
   },
-  integrations: [react()]
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          // path to your scss variables
+          additionalData: `@import "src/styles/variables.scss"; @import "src/styles/mixins.scss";`
+        }
+      }
+    }
+  },
+  integrations: [react()],
 });
