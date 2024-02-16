@@ -1,0 +1,13 @@
+.About {
+  .content {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 24px;
+
+    .text {
+      display: grid;
+      gap: 24px;
+      color: var(--colour-font-secondary);
+    }
+  }
+}

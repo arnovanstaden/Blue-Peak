@@ -1,0 +1,15 @@
+---
+import styles from './SectionHeading.module.scss';
+
+interface Props {
+  heading: string;
+  subheading: string;
+}
+
+const { heading, subheading } = Astro.props;
+---
+
+<header class={styles.SectionHeading}>
+  <h2>{heading}</h2>
+  <h3>{subheading}</h3>
+</header>

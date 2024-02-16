@@ -2,6 +2,7 @@
   --colour-white: #fbfbfb;
   --colour-secondary: #eaeaea;
   --colour-tertiary: #636777;
+  --colour-quarternary: #b6bacd;
   --colour-accent: #1c1e27;
   --colour-primary: #2b5fae;
 
@@ -12,7 +13,7 @@
 
   @media screen and (prefers-color-scheme: dark) {
     --colour-font: var(--colour-white);
-    --colour-font-secondary: var(--colour-tertiary);
+    --colour-font-secondary: var(--colour-quarternary);
     --color-background: var(--colour-accent);
   }
 }

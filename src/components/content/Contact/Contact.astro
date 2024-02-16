@@ -8,14 +8,17 @@ import TikTokIcon from '@static/icons/tiktok.svg?raw';
 import whatsappIcon from '@static/icons/whatsapp.svg?raw';
 import emailIcon from '@static/icons/email.svg?raw';
 import phoneIcon from '@static/icons/phone.svg?raw';
+import SectionHeading from '@components/UI/SectionHeading/SectionHeading.astro';
 ---
 
 <section class={styles.Contact}>
   <Container>
     <div class={styles.content}>
       <div class={styles.details}>
-        <h3>So you want to get in touch.</h3>
-        <h2>How can we fix your problem?</h2>
+        <SectionHeading
+          heading="How can we fix your problem?"
+          subheading="So you want to get in touch"
+        />
         <div class={styles.contact}>
           <a href="https://wa.me/+27603083694">
             <Fragment set:html={whatsappIcon} />

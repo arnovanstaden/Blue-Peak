@@ -1,0 +1,18 @@
+.SectionHeading {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+
+  h3 {
+    font-weight: 400;
+    color: var(--colour-font-secondary);
+    margin-bottom: 8px;
+    order: 1;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 500;
+    order: 2;
+  }
+}

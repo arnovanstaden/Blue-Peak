@@ -20,7 +20,8 @@
       font-size: 15px;
 
       &::placeholder {
-        color: var(--colour-font-secondary);
+        color: var(--colour-font);
+        font-weight: 300;
       }
 
       &:focus {
