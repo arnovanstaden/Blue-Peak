@@ -1,0 +1,4 @@
+.ContactPage {
+  height: calc(100vh - $header-height);
+  @include flexCenter;
+}

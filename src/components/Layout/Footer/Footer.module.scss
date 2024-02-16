@@ -12,6 +12,14 @@
     display: flex;
     gap: 1rem;
     font-size: 14px;
+
+    a {
+      transition: 0.3s ease-out;
+
+      &:hover {
+        color: var(--colour-primary);
+      }
+    }
   }
 
   .copyright {
@@ -27,8 +35,16 @@
     svg {
       width: 18px;
       height: 18px;
+
       * {
         fill: var(--colour-font-secondary);
+        transition: 0.3s ease-out;
+      }
+
+      &:hover {
+        * {
+          fill: var(--colour-primary);
+        }
       }
     }
   }

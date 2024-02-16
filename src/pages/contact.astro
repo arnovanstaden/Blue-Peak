@@ -1,7 +1,12 @@
 ---
 import Layout from '../components/Layout/Layout.astro';
+import ContactSection from '@components/content/Contact/Contact.astro';
+import styles from '@styles/pages/ContactPage.module.scss';
 ---
 
-<Layout title="Contact | Blue Peak Plumbing & Gas">
-  <h1>Contact Page</h1>
+<Layout
+  className={styles.ContactPage}
+  title="Contact | Blue Peak Plumbing & Gas"
+>
+  <ContactSection />
 </Layout>

@@ -1,0 +1,14 @@
+.Landing {
+  height: calc(100vh - $header-height);
+  @include flexCenter;
+  text-align: center;
+
+  .content {
+    @include flexCenter;
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 24px;
+    }
+  }
+}

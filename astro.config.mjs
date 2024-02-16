@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
 
-import react from "@astrojs/react";
+import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,7 +12,7 @@ export default defineConfig({
       preprocessorOptions: {
         scss: {
           // path to your scss variables
-          additionalData: `@import "src/styles/variables.scss"; @import "src/styles/mixins.scss";`
+          additionalData: '@import "src/styles/variables.scss"; @import "src/styles/mixins.scss";'
         }
       }
     }

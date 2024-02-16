@@ -1,0 +1,36 @@
+.ContactForm {
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 24px;
+    row-gap: 32px;
+    margin-bottom: 32px;
+
+    input,
+    textarea {
+      padding: 8px;
+      background-color: transparent;
+      border: none;
+      font-family: 'Poppins';
+      border-bottom: 1px solid var(--colour-font-secondary);
+      width: 100%;
+      outline: none;
+      color: var(--colour-font);
+      transition: 0.3s ease-out;
+      font-size: 15px;
+
+      &::placeholder {
+        color: var(--colour-font-secondary);
+      }
+
+      &:focus {
+        border-bottom: 1px solid var(--colour-primary);
+      }
+    }
+
+    textarea {
+      grid-column: 1 / 3;
+      resize: none;
+    }
+  }
+}

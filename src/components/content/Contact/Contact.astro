@@ -1,0 +1,57 @@
+---
+import Container from '@components/UI/Container/Container.astro';
+import styles from './Contact.module.scss';
+import ContactForm from '@components/content/Contact/ContactForm/ContactForm';
+import InstagramIcon from '@static/icons/instagram.svg?raw';
+import FacebookIcon from '@static/icons/facebook.svg?raw';
+import TikTokIcon from '@static/icons/tiktok.svg?raw';
+import whatsappIcon from '@static/icons/whatsapp.svg?raw';
+import emailIcon from '@static/icons/email.svg?raw';
+import phoneIcon from '@static/icons/phone.svg?raw';
+---
+
+<section class={styles.Contact}>
+  <Container>
+    <div class={styles.content}>
+      <div class={styles.details}>
+        <h3>So you want to get in touch.</h3>
+        <h2>How can we fix your problem?</h2>
+        <div class={styles.contact}>
+          <a href="https://wa.me/+27603083694">
+            <Fragment set:html={whatsappIcon} />
+            0603083694
+          </a>
+          <a href="tel:0603083694">
+            <Fragment set:html={phoneIcon} />
+            0603083694
+          </a>
+          <a href="mailto:info@blue-peak.co.za">
+            <Fragment set:html={emailIcon} />
+            info@blue-peak.co.za
+          </a>
+        </div>
+        <div class={styles.social}>
+          <a
+            href="https://www.instagram.com/bluepeak.plumbing.gas"
+            target="_blank"
+          >
+            <Fragment set:html={InstagramIcon} />
+          </a>
+          <a
+            href="https://www.instagram.com/bluepeak.plumbing.gas"
+            target="_blank"
+          >
+            <Fragment set:html={FacebookIcon} />
+          </a>
+          <a
+            href="https://www.instagram.com/bluepeak.plumbing.gas"
+            target="_blank"
+          >
+            <Fragment set:html={TikTokIcon} />
+          </a>
+        </div>
+      </div>
+      <ContactForm />
+    </div>
+  </Container>
+</section>

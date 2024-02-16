@@ -1,0 +1,61 @@
+.Contact {
+  padding: 60px 0;
+  width: 100%;
+
+  .content {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 24px;
+
+    .details {
+      h3 {
+        font-weight: 400;
+        margin-bottom: 8px;
+      }
+
+      .contact {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 24px;
+
+        a {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          transition: 0.3s ease-out;
+          svg * {
+            fill: var(--colour-primary);
+          }
+
+          &:hover {
+            color: var(--colour-primary);
+            gap: 20px;
+          }
+        }
+      }
+
+      .social {
+        display: flex;
+        gap: 1rem;
+        margin-top: 24px;
+      }
+    }
+  }
+}
+
+svg {
+  width: 18px;
+  height: 18px;
+
+  * {
+    fill: var(--colour-primary);
+    transition: 0.3s ease-out;
+  }
+
+  &:hover {
+    * {
+      fill: var(--colour-font);
+    }
+  }
+}

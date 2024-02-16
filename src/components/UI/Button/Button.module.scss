@@ -1,16 +1,56 @@
 .Button {
-  background-color: transparent;
-  border: 1px solid var(--colour-font);
-  color: var(--colour-font);
   display: block;
   width: fit-content;
-  padding: 8px 24px;
+  padding: 12px 24px;
   border-radius: 10px;
   cursor: pointer;
   transition: 0.3s ease-out;
+  outline: none;
+  border-style: solid;
+  border-width: 1px;
+  font-weight: 500;
 
-  &:hover {
-    color: var(--colour-primary);
+  &.colour-font {
+    border-color: var(--colour-font);
+    color: var(--colour-font);
+    background-color: transparent;
+
+    &:hover {
+      color: var(--colour-primary);
+      border-color: var(--colour-primary);
+    }
+
+    &.variant-contained {
+      background-color: var(--colour-font);
+      color: var(--colour-primary);
+
+      &:hover {
+        color: var(--colour-font);
+        border-color: var(--colour-primary);
+        background-color: var(--colour-primary);
+      }
+    }
+  }
+
+  &.colour-primary {
+    background-color: transparent;
     border-color: var(--colour-primary);
+    color: var(--colour-primary);
+
+    &:hover {
+      border: 1px solid var(--colour-font);
+      color: var(--colour-font);
+    }
+
+    &.variant-contained {
+      background-color: var(--colour-primary);
+      color: var(--colour-font);
+
+      &:hover {
+        background-color: var(--colour-font);
+        border-color: var(--colour-font);
+        color: var(--colour-primary);
+      }
+    }
   }
 }
