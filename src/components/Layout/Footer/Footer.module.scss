@@ -5,8 +5,8 @@
   gap: 16px;
   font-weight: 300;
   padding: 16px 0 32px;
-  border-top: 1px solid var(--font-color-secondary);
-  color: var(--font-color-secondary);
+  border-top: 1px solid var(--colour-font-secondary);
+  color: var(--colour-font-secondary);
 
   nav {
     display: flex;
@@ -28,7 +28,7 @@
       width: 18px;
       height: 18px;
       * {
-        fill: var(--font-color-secondary);
+        fill: var(--colour-font-secondary);
       }
     }
   }

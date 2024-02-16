@@ -1,3 +1,39 @@
 .Header {
-  background-color: red;
+  padding-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 16px;
+
+  .logo {
+    align-items: center;
+    gap: 12px;
+    display: flex;
+
+    img {
+      width: 50px;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 500;
+      margin: 0;
+    }
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    font-size: 16px;
+
+    a {
+      letter-spacing: 0.5px;
+    }
+  }
+
+  .cta {
+    display: flex;
+    justify-content: right;
+  }
 }

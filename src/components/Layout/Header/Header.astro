@@ -1,8 +1,24 @@
 ---
 import styles from './Header.module.scss';
 import Container from '../../UI/Container/Container.astro';
+import Button from '../../UI/Button/Button';
 ---
 
-<header class={styles.Header}>
-  <Container> Header </Container>
+<header>
+  <Container>
+    <div class={styles.Header}>
+      <a href="/" class={styles.logo}>
+        <img src="/static/logos/logo.svg" alt="Logo" />
+        <p>Blue Peak</p>
+      </a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/services">Services</a>
+        <a href="/contact">Contact</a>
+      </nav>
+      <div class={styles.cta}>
+        <Button onClick={() => alert('Test')}>Get in Touch</Button>
+      </div>
+    </div>
+  </Container>
 </header>

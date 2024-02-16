@@ -1,0 +1,16 @@
+.Button {
+  background-color: transparent;
+  border: 1px solid var(--colour-font);
+  color: var(--colour-font);
+  display: block;
+  width: fit-content;
+  padding: 8px 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+
+  &:hover {
+    color: var(--colour-primary);
+    border-color: var(--colour-primary);
+  }
+}

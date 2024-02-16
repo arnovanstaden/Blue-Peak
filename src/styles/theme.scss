@@ -6,14 +6,13 @@
   --colour-primary: #2b5fae;
 
   // Light mode
-  --font-color: var(--colour-accent);
-  --font-color-secondary: var(--colour-tertiary);
+  --colour-font: var(--colour-accent);
+  --colour-font-secondary: var(--colour-tertiary);
   --color-background: var(--colour-white);
-}
 
-@media screen and (prefers-color-scheme: dark) {
-  :root {
-    --font-color: var(--colour-white);
+  @media screen and (prefers-color-scheme: dark) {
+    --colour-font: var(--colour-white);
+    --colour-font-secondary: var(--colour-tertiary);
     --color-background: var(--colour-accent);
   }
 }
