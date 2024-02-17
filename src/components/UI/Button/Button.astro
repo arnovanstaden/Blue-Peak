@@ -1,0 +1,26 @@
+---
+import ButtonBase, { type ButtonProps } from './ButtonBase.astro';
+
+interface Props extends ButtonProps {
+  href?: string;
+  colour?: 'font' | 'primary';
+  variant?: 'contained' | 'outlined' | 'text';
+  withArrow?: boolean;
+}
+
+const { href, ...props } = Astro.props;
+---
+
+{
+  href ? (
+    <a href={href}>
+      <ButtonBase {...props}>
+        <slot />
+      </ButtonBase>
+    </a>
+  ) : (
+    <ButtonBase {...props}>
+      <slot />
+    </ButtonBase>
+  )
+}

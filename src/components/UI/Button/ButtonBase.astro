@@ -1,0 +1,35 @@
+---
+import classNames from 'classnames';
+import styles from './Button.module.scss';
+
+export interface ButtonProps {
+  id?: string;
+  colour?: 'font' | 'primary';
+  variant?: 'contained' | 'outlined' | 'text';
+  withArrow?: boolean;
+}
+
+const { variant = 'outlined', colour = 'font', ...props } = Astro.props;
+
+const buttonClasses = classNames(
+  styles.Button,
+  styles[`colour-${colour}`],
+  styles[`variant-${variant}`]
+);
+---
+
+<button class={buttonClasses} type='button' id={props.id}>
+  <slot />
+  {
+    props.withArrow && (
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        height='24'
+        viewBox='0 -960 960 960'
+        width='24'
+      >
+        <path d='M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z' />
+      </svg>
+    )
+  }
+</button>
