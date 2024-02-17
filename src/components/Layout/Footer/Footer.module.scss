@@ -1,8 +1,11 @@
 .Footer {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    'navigation'
+    'social'
+    'copyright';
   align-items: center;
-  gap: 16px;
+  gap: 24px;
   font-weight: 300;
   padding: 16px 0 32px;
   border-top: 1px solid var(--colour-font-secondary);
@@ -12,6 +15,8 @@
     display: flex;
     gap: 1rem;
     font-size: 14px;
+    grid-area: navigation;
+    justify-content: center;
 
     a {
       transition: 0.3s ease-out;
@@ -25,12 +30,14 @@
   .copyright {
     text-align: center;
     font-size: 12px;
+    grid-area: copyright;
   }
 
   .social {
     display: flex;
     gap: 1rem;
-    justify-content: right;
+    justify-content: center;
+    grid-area: social;
 
     svg {
       width: 18px;
@@ -46,6 +53,18 @@
           fill: var(--colour-primary);
         }
       }
+    }
+  }
+
+  @include breakpoint-md {
+    justify-content: space-between;
+    grid-template-areas: 'navigation copyright social';
+    gap: 16px;
+    nav {
+      justify-content: flex-start;
+    }
+    .social {
+      justify-content: flex-end;
     }
   }
 }
