@@ -1,0 +1,10 @@
+.Card {
+  padding: 32px;
+  background-color: var(--colour-container);
+  border-radius: 16px;
+  width: 100%;
+  transition: 0.3s ease-out;
+
+  &:hover {
+  }
+}

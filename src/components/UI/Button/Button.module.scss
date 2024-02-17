@@ -1,5 +1,6 @@
 .Button {
-  display: block;
+  display: flex;
+  flex-shrink: 0;
   width: fit-content;
   padding: 12px 24px;
   border-radius: 10px;
@@ -9,46 +10,106 @@
   border-style: solid;
   border-width: 1px;
   font-weight: 500;
+  align-items: center;
 
-  &.colour-font {
-    border-color: var(--colour-font);
-    color: var(--colour-font);
-    background-color: transparent;
+  &.variant {
+    &-contained {
+      &.colour {
+        &-primary {
+          background-color: var(--colour-primary);
+          color: var(--colour-on-colour);
+          border-color: var(--colour-primary);
 
-    &:hover {
-      color: var(--colour-primary);
-      border-color: var(--colour-primary);
-    }
+          &:hover {
+            background-color: var(--colour-font);
+            border-color: var(--colour-font);
+            color: var(--colour-primary);
 
-    &.variant-contained {
-      background-color: var(--colour-font);
-      color: var(--colour-on-colour);
+            * {
+              fill: var(--colour-primary);
+            }
+          }
+        }
 
-      &:hover {
-        color: var(--colour-font);
-        border-color: var(--colour-primary);
-        background-color: var(--colour-primary);
+        &-font {
+          background-color: var(--colour-font);
+          border-color: var(--colour-font);
+          color: var(--colour-background);
+
+          &:hover {
+            background-color: var(--colour-primary);
+            border-color: var(--colour-primary);
+            color: var(--colour-font);
+
+            * {
+              fill: var(--colour-font);
+            }
+          }
+        }
       }
     }
-  }
 
-  &.colour-primary {
-    background-color: transparent;
-    border-color: var(--colour-primary);
-    color: var(--colour-primary);
+    &-outlined {
+      &.colour {
+        &-primary {
+          background-color: transparent;
+          color: var(--colour-primary);
+          border-color: var(--colour-primary);
 
-    &:hover {
-      border-color: var(--colour-font);
-      color: var(--colour-font);
+          &:hover {
+            color: var(--colour-font);
+            border-color: var(--colour-font);
+
+            * {
+              fill: var(--colour-font);
+            }
+          }
+        }
+
+        &-font {
+          background-color: transparent;
+          color: var(--colour-font);
+          border-color: var(--colour-font);
+
+          &:hover {
+            color: var(--colour-primary);
+            border-color: var(--colour-primary);
+
+            * {
+              fill: var(--colour-primary);
+            }
+          }
+        }
+      }
     }
 
-    &.variant-contained {
-      background-color: var(--colour-primary);
-      color: var(--colour-on-colour);
+    &-text {
+      &.colour {
+        &-primary {
+          background-color: transparent;
+          color: var(--colour-primary);
+          border-color: transparent;
 
-      &:hover {
-        background-color: var(--colour-font);
-        border-color: var(--colour-font);
+          &:hover {
+            color: var(--colour-font);
+            * {
+              fill: var(--colour-font);
+            }
+          }
+        }
+
+        &-font {
+          background-color: transparent;
+          color: var(--colour-font);
+          border-color: transparent;
+
+          &:hover {
+            color: var(--colour-primary);
+            * {
+              fill: var(--colour-primary);
+            }
+          }
+        }
       }
     }
   }

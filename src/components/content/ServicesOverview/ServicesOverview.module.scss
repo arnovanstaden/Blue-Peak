@@ -1,0 +1,25 @@
+.ServicesOverview {
+  .content {
+    .cardGrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+
+      .card {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px h3 {
+          font-size: 24px;
+          font-weight: 500;
+        }
+
+        h4 {
+          font-size: 15px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}

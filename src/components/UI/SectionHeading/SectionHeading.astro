@@ -1,15 +1,23 @@
 ---
+import classNames from 'classnames';
 import styles from './SectionHeading.module.scss';
 
 interface Props {
   heading: string;
   subheading: string;
+  centerAlign?: boolean;
 }
 
-const { heading, subheading } = Astro.props;
+const { heading, subheading, centerAlign } = Astro.props;
+
+const classes = classNames(
+styles.SectionHeading,
+centerAlign && styles.centerAlign,
+);
+
 ---
 
-<header class={styles.SectionHeading}>
+<header class={classes}>
   <h1>{heading}</h1>
   <h2>{subheading}</h2>
 </header>

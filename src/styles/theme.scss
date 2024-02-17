@@ -4,20 +4,19 @@
   --colour-quarternary: #b6bacd;
   --colour-accent: #1c1e27;
   --colour-container: #eaeaea;
-  --colour-container: #eaeaea;
   --colour-primary: #2b5fae;
 
   // Light mode
   --colour-font: var(--colour-accent);
   --colour-font-secondary: var(--colour-tertiary);
-  --color-background: var(--colour-white);
+  --colour-background: var(--colour-white);
   --colour-on-colour: #fbfbfb;
 
   @media screen and (prefers-color-scheme: dark) {
     --colour-container: #252733;
     --colour-font: var(--colour-white);
     --colour-font-secondary: var(--colour-quarternary);
-    --color-background: var(--colour-accent);
+    --colour-background: var(--colour-accent);
     --colour-on-colour: #1c1e27;
   }
 }
