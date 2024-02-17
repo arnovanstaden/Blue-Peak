@@ -50,9 +50,10 @@ export const servicesData = [
     description: 'Ensuring safety and compliance with every installation',
     image: CocImage,
     services: [
-      'Our team has all the right licenses and certificates as we are registered at:',
-      'LPGSA (Liquefied Petroleum Gas Association of South Africa)',
-      'QCTO (Quality Council for Trades & Occupations)',
+      `Our team has all the right licenses and certificates as we are registered at:
+       \n - LPGSA (Liquefied Petroleum Gas Association of South Africa)
+       \n - QCTO (Quality Council for Trades & Occupations)
+      `,
       'We offer Certificates of compliance for gas and plumbing installations.'
     ]
   },
