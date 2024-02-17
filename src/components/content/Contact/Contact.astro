@@ -8,14 +8,24 @@ import whatsappIcon from '@static/icons/whatsapp.svg?raw';
 import emailIcon from '@static/icons/email.svg?raw';
 import phoneIcon from '@static/icons/phone.svg?raw';
 import SectionHeading from '@components/UI/SectionHeading/SectionHeading.astro';
+
+interface Props {
+  withSectionHeading?: boolean;
+}
+
+const { withSectionHeading } = Astro.props;
 ---
 
 <div class={styles.Contact}>
   <div class={styles.details}>
-    <SectionHeading
-      heading='How can we fix your problem?'
-      subheading='So you want to get in touch'
-    />
+    {
+      withSectionHeading && (
+        <SectionHeading
+          heading='How can we fix your problem?'
+          subheading='So you want to get in touch'
+        />
+      )
+    }
     <div class={styles.contact}>
       <a href='https://wa.me/+27603083694'>
         <Fragment set:html={whatsappIcon} />
