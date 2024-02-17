@@ -8,9 +8,15 @@ export interface ButtonProps {
   variant?: 'contained' | 'outlined' | 'text';
   withArrow?: boolean;
   className?: string;
+  type?: 'button' | 'submit' | 'reset';
 }
 
-const { variant = 'outlined', colour = 'font', ...props } = Astro.props;
+const {
+  variant = 'outlined',
+  colour = 'font',
+  type = 'button',
+  ...props
+} = Astro.props;
 
 const buttonClasses = classNames(
   styles.Button,
@@ -20,7 +26,7 @@ const buttonClasses = classNames(
 );
 ---
 
-<button class={buttonClasses} type='button' id={props.id}>
+<button class={buttonClasses} type={type} id={props.id}>
   <slot />
   {
     props.withArrow && (

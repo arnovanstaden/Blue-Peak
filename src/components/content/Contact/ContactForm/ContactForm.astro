@@ -4,20 +4,65 @@ import styles from './ContactForm.module.scss';
 ---
 
 <div class={styles.ContactForm}>
-  <form action=''>
-    <input type='text' name='name' placeholder='Full Name' />
-    <input type='email' name='email' placeholder='Email' />
-    <input type='tel' name='phone' placeholder='Phone' />
+  <form id='conctactForm'>
+    <input type='text' name='name' placeholder='Full Name*' required />
+    <input type='email' name='email' placeholder='Email*' required />
+    <input type='tel' name='phone' placeholder='Phone*' required />
     <input type='text' name='address' placeholder='Address' />
-    <textarea placeholder='Message' name='message' rows={4}></textarea>
+    <textarea placeholder='Message*' name='message' rows={4} required
+    ></textarea>
+    <Button
+      variant='contained'
+      colour='primary'
+      id='submitButton'
+      type='submit'
+    >
+      Submit
+    </Button>
   </form>
-  <Button variant='contained' colour='primary' id='formSubmitButton'>
-    Submit
-  </Button>
 </div>
 
 <script>
+  const sendEmail = async (data: object) => {
+    await fetch('/contact-form.json', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+      .then(() => {
+        const form = document.getElementById(
+          'conctactForm'
+        )! as HTMLFormElement;
+        form.reset();
+        alert('Thank you for your message. We will get back to you soon.');
+      })
+      .catch(() => {
+        alert('Error submitting form. Please try again.');
+      });
+  };
   document
-    .getElementById('formSubmitButton')!
-    .addEventListener('click', () => alert('Form submitted!'));
+    .getElementById('submitButton')!
+    .addEventListener('click', function (event) {
+      // Prevent default form submission
+      event.preventDefault();
+
+      // Get form data
+      const form = document.getElementById('conctactForm')! as HTMLFormElement;
+
+      if (!form.checkValidity()) {
+        // If form is invalid, return false to prevent further processing
+        return alert('Please fill in all required fields.');
+      }
+      const formData = new FormData(form);
+
+      // Convert FormData to JSON
+      const formDataJson: { [key: string]: string } = {};
+      formData.forEach(function (value, key) {
+        formDataJson[key as string] = value as string;
+      });
+
+      sendEmail(formDataJson);
+    });
 </script>
