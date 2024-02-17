@@ -4,6 +4,7 @@ import Container from '@components/UI/Container/Container.astro';
 import SectionHeading from '@components/UI/SectionHeading/SectionHeading.astro';
 import Card from '@components/UI/Card/Card.astro';
 import servicesOverviewData from './ServicesOverview.data';
+import { Image } from 'astro:assets';
 ---
 
 <section class={styles.ServicesOverview}>
@@ -21,7 +22,13 @@ import servicesOverviewData from './ServicesOverview.data';
               <h3>{service.name}</h3>
               <h4>{service.description}</h4>
               <div class={styles.image}>
-                <img src={service.image} alt='Service' />
+                <Image
+                  loading='lazy'
+                  src={service.image}
+                  alt='Gas Stove'
+                  width={600}
+                  height={600}
+                />
               </div>
             </Card>
           ))

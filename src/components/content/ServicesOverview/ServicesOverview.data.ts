@@ -1,23 +1,28 @@
+import PlumbingImage from '@static/images/plumbing.jpg';
+import HeatingImage from '@static/images/heating.jpeg';
+import GasImage from '@static/images/gas.jpeg';
+import CocImage from '@static/images/coc.jpeg';
+
 export const servicesOverviewData = [
   {
     name: 'Plumbing',
     description: 'lorem ipsum dolor sit amet',
-    image: '/static/images/plumbing.jpg'
+    image: PlumbingImage,
   },
   {
     name: 'Heating',
     description: 'lorem ipsum dolor sit amet',
-    image: '/static/images/heating.jpeg'
+    image: HeatingImage
   },
   {
     name: 'Gas',
     description: 'lorem ipsum dolor sit amet',
-    image: '/static/images/gas.jpeg'
+    image: GasImage
   },
   {
     name: 'Certificates of Compliance',
     description: 'lorem ipsum dolor sit amet',
-    image: '/static/images/coc.jpeg'
+    image: CocImage
   },
 ]
 

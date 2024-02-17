@@ -3,6 +3,8 @@ import styles from './WhyChooseUs.module.scss';
 import Container from '@components/UI/Container/Container.astro';
 import SectionHeading from '@components/UI/SectionHeading/SectionHeading.astro';
 import whyChooseUsData from './WhyChooseUs.data';
+import { Image } from 'astro:assets';
+import GasStoveImage from '@static/images/gas-stove.jpg';
 ---
 
 <section class={styles.WhyChooseUs}>
@@ -10,11 +12,18 @@ import whyChooseUsData from './WhyChooseUs.data';
     <div class={styles.content}>
       <div class={styles.left}>
         <SectionHeading
-          heading="Peak Performance"
-          subheading="Why choose us?"
+          heading='Peak Performance'
+          subheading='Why choose us?'
         />
         <div class={styles.image}>
-          <img src="/static/images/gas-stove.jpg" alt="gas-stove" />
+          <Image
+            loading='lazy'
+            src={GasStoveImage}
+            alt='Gas Stove'
+            width={500}
+            height={250}
+            quality={100}
+          />
         </div>
       </div>
       <div class={styles.grid}>
