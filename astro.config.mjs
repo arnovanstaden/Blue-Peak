@@ -1,12 +1,14 @@
 import { defineConfig } from 'astro/config';
-
 import react from '@astrojs/react';
+
+import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
   server: {
     port: 3000
   },
+  prefetch: true,
   vite: {
     css: {
       preprocessorOptions: {
@@ -17,5 +19,6 @@ export default defineConfig({
       }
     }
   },
-  integrations: [react()],
+  site: 'https://www.blue-peak.co.za',
+  integrations: [react(), sitemap()]
 });
