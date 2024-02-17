@@ -1,19 +1,19 @@
 const whyChooseUsData = [
   {
-    title: 'Expertise You Can Rely On',
-    text: 'Our team consists of licensed and experienced plumbers who are well-versed in all aspects of plumbing. Rest assured, your plumbing needs will be handled with utmost professionalism and expertise.',
+    title: 'Reliability',
+    text: 'Experience reliability like never before. We take pride in our unwavering commitment to timely service, expert solutions, and trustworthy professionals. Your satisfaction is our priority.'
   },
   {
-    title: 'Prompt and Reliable Service',
-    text: 'We understand the importance of timely solutions when it comes to plumbing issues. Count on us to respond promptly to your service requests and deliver reliable solutions that exceed your expectations.',
+    title: 'Commitment',
+    text: 'At our plumbing company, commitment is at the core of everything we do. We are dedicated to providing exceptional service, tackling every project with passion and expertise.'
   },
   {
-    title: 'Affordable Pricing',
-    text: 'We believe that quality plumbing services should be accessible to all. That\'s why we offer competitive pricing without compromising on the quality of our workmanship.',
+    title: 'Urgency',
+    text: 'Urgency is our priority! We understand that plumbing issues demand swift attention, trust us to respond promptly to your urgent needs, providing reliable service when you need it most.'
   },
   {
-    title: 'Customer Satisfaction Guaranteed',
-    text: 'Your satisfaction is our top priority. We are dedicated to providing exceptional service, ensuring that every project is completed to your satisfaction. We value open communication and strive to exceed your expectations at every step.',
+    title: 'Excellence',
+    text: 'Our dedicated team of skilled professionals consistently delivers top-notch solutions. From meticulous craftsmanship to unparalleled customer service, we pride ourselves on setting the standard for excellence in the plumbing industry.'
   },
 ]
 

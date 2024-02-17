@@ -24,12 +24,12 @@ export const servicesData = [
     image: HeatingImage,
     services: [
       'Electric geysers',
-    'Solar geysers',
-    'Gas Geysers',
-    'Geyser Maintenance',
-    'Geyser Replacements',
-    'Heat Pumps',
-    'Gas Fireplaces'
+      'Solar geysers',
+      'Gas Geysers',
+      'Geyser Maintenance',
+      'Geyser Replacements',
+      'Heat Pumps',
+      'Gas Fireplaces'
     ]
   },
   {
@@ -42,7 +42,7 @@ export const servicesData = [
       'Water Heaters',
       'Stoves',
       'Fireplaces',
-      'Residential and Commercial Installations and maintenance.'
+      'Gas leaks'
     ]
   },
   {
