@@ -6,9 +6,6 @@
 
   .details {
     svg {
-      width: 18px;
-      height: 18px;
-
       * {
         fill: var(--colour-primary);
         transition: 0.3s ease-out;
@@ -34,6 +31,8 @@
         transition: 0.3s ease-out;
 
         svg * {
+          width: 20px;
+          height: 20px;
           fill: var(--colour-primary);
         }
 
@@ -49,6 +48,11 @@
       gap: 1rem;
       margin-top: 32px;
       justify-content: center;
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
     }
   }
 

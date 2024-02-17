@@ -6,7 +6,7 @@ import CocImage from '@static/images/coc.jpeg';
 export const servicesData = [
   {
     name: 'Plumbing',
-    description: 'lorem ipsum dolor sit amet',
+    description: 'Expert plumbing solutions for your every need',
     image: PlumbingImage,    services: [
       'General Plumbing',
       'Geyser Installations',
@@ -20,7 +20,7 @@ export const servicesData = [
   },
   {
     name: 'Heating',
-    description: 'lorem ipsum dolor sit amet',
+    description: 'Stay warm with our premium heating services',
     image: HeatingImage,
     services: [
       'Electric geysers',
@@ -34,7 +34,7 @@ export const servicesData = [
   },
   {
     name: 'Gas',
-    description: 'lorem ipsum dolor sit amet',
+    description: 'Efficient gas solutions tailored to your needs',
     image: GasImage,
     services: [
       'Gas Certificate of Compliance.',
@@ -47,7 +47,7 @@ export const servicesData = [
   },
   {
     name: 'Certificates of Compliance',
-    description: 'lorem ipsum dolor sit amet',
+    description: 'Ensuring safety and compliance with every installation',
     image: CocImage,
     services: [
       'Our team has all the right licenses and certificates as we are registered at:',
