@@ -1,7 +1,7 @@
 .Header {
   padding-top: 32px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr auto;
   align-items: center;
   gap: 16px;
   height: $header-height;
@@ -23,18 +23,30 @@
   }
 
   nav {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    font-size: 16px;
-
-    a {
-      letter-spacing: 0.5px;
-    }
+    display: none;
   }
 
   .cta {
-    display: flex;
-    justify-content: right;
+    display: none;
+  }
+
+  @include breakpoint-md {
+    grid-template-columns: repeat(3, 1fr);
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      font-size: 16px;
+
+      a {
+        letter-spacing: 0.5px;
+      }
+    }
+
+    .cta {
+      display: flex;
+      justify-content: right;
+    }
   }
 }
