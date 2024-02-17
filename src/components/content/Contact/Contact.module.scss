@@ -1,53 +1,52 @@
 .Contact {
-  .content {
-    display: grid;
-    grid-template-columns: 2fr 3fr;
-    gap: 48px;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 48px;
+  width: 100%;
 
-    .details {
-      .contact {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 12px;
+  .details {
+    svg {
+      width: 18px;
+      height: 18px;
 
-        a {
-          display: flex;
-          align-items: center;
-          gap: 16px;
-          transition: 0.3s ease-out;
+      * {
+        fill: var(--colour-primary);
+        transition: 0.3s ease-out;
+      }
 
-          svg * {
-            fill: var(--colour-primary);
-          }
-
-          &:hover {
-            color: var(--colour-primary);
-            gap: 20px;
-          }
+      &:hover {
+        * {
+          fill: var(--colour-font);
         }
       }
+    }
 
-      .social {
+    .contact {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+
+      a {
         display: flex;
-        gap: 1rem;
-        margin-top: 32px;
+        align-items: center;
+        gap: 16px;
+        transition: 0.3s ease-out;
+
+        svg * {
+          fill: var(--colour-primary);
+        }
+
+        &:hover {
+          color: var(--colour-primary);
+          gap: 20px;
+        }
       }
     }
-  }
-}
 
-svg {
-  width: 18px;
-  height: 18px;
-
-  * {
-    fill: var(--colour-primary);
-    transition: 0.3s ease-out;
-  }
-
-  &:hover {
-    * {
-      fill: var(--colour-font);
+    .social {
+      display: flex;
+      gap: 1rem;
+      margin-top: 32px;
     }
   }
 }

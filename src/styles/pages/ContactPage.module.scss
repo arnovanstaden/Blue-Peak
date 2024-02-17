@@ -1,4 +1,6 @@
 .ContactPage {
-  height: calc(100vh - $header-height);
-  @include flexCenter;
+  .contactCard {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
 }

@@ -7,17 +7,17 @@ import Button from '@components/UI/Button/Button';
 <header>
   <Container>
     <div class={styles.Header}>
-      <a href="/" class={styles.logo}>
-        <img src="/static/logos/logo.svg" alt="Logo" />
+      <a href='/' class={styles.logo}>
+        <img src='/static/logos/logo.svg' alt='Logo' />
         <p>Blue Peak</p>
       </a>
       <nav>
-        <a href="/">Home</a>
-        <a href="/services">Services</a>
-        <a href="/contact">Contact</a>
+        <a href='/'>Home</a>
+        <a href='/services'>Services</a>
+        <a href='/contact'>Contact</a>
       </nav>
       <div class={styles.cta}>
-        <Button onClick={() => alert('Test')}> Get in Touch </Button>
+        <Button href='/contact'> Get in Touch </Button>
       </div>
     </div>
   </Container>

@@ -2,11 +2,21 @@
 import Layout from '../components/Layout/Layout.astro';
 import ContactSection from '@components/content/Contact/Contact.astro';
 import styles from '@styles/pages/ContactPage.module.scss';
+import FAQs from '@components/content/FAQs/FAQs.astro';
+import Card from '@components/UI/Card/Card.astro';
+import Container from '@components/UI/Container/Container.astro';
 ---
 
 <Layout
   className={styles.ContactPage}
-  title="Contact | Blue Peak Plumbing & Gas"
+  title='Contact | Blue Peak Plumbing & Gas'
 >
-  <ContactSection />
+  <section>
+    <Container>
+      <Card className={styles.contactCard}>
+        <ContactSection />
+      </Card>
+    </Container>
+  </section>
+  <FAQs />
 </Layout>

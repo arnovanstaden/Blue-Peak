@@ -1,0 +1,51 @@
+---
+import styles from './FAQs.module.scss';
+import Container from '@components/UI/Container/Container.astro';
+import SectionHeading from '@components/UI/SectionHeading/SectionHeading.astro';
+import faqData from './FAQs.data';
+import Card from '@components/UI/Card/Card.astro';
+---
+
+<section class={styles.FAQs}>
+  <Container>
+    <div class={styles.content}>
+      <SectionHeading
+        heading='Have a burning question?'
+        subheading='Frequency Asked Questions'
+        centerAlign
+      />
+      <div class={styles.cardGrid}>
+        {
+          faqData.map((faq) => (
+            <Card className={styles.card}>
+              <div class={styles.question}>
+                <h4>{faq.question}</h4>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  height='24'
+                  viewBox='0 -960 960 960'
+                  width='24'
+                >
+                  <path d='M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z' />
+                </svg>
+              </div>
+              <p class={styles.answer}>{faq.answer}</p>
+            </Card>
+          ))
+        }
+      </div>
+    </div>
+  </Container>
+</section>
+
+<script>
+  // Find our component DOM on the page.
+  import styles from './FAQs.module.scss';
+  const faqCards = document.querySelectorAll(`.${styles.card}`);
+
+  faqCards.forEach((card) => {
+    card.addEventListener('click', () => {
+      card.classList.toggle(styles.open);
+    });
+  });
+</script>

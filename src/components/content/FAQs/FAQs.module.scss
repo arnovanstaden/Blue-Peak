@@ -1,0 +1,44 @@
+.FAQs {
+  .content {
+    .cardGrid {
+      display: grid;
+      gap: 24px;
+
+      .card {
+        cursor: pointer;
+
+        .question {
+          display: flex;
+          justify-content: space-between;
+          gap: 32px;
+          align-items: center;
+          transition: 0.3s ease-out;
+
+          svg {
+            transform: rotate(90deg);
+          }
+        }
+
+        .answer {
+          font-weight: 300;
+          height: 0;
+          overflow: hidden;
+          transition: 0.3s ease-out;
+        }
+
+        &.open {
+          .question {
+            svg {
+              transform: rotate(-90deg);
+            }
+          }
+
+          .answer {
+            height: auto;
+            margin-top: 24px;
+          }
+        }
+      }
+    }
+  }
+}
