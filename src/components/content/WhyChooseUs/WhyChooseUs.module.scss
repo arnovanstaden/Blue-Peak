@@ -1,7 +1,7 @@
 .WhyChooseUs {
   .content {
     display: grid;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 1fr;
     gap: 48px;
 
     .left {
@@ -41,6 +41,13 @@
           font-weight: 300;
         }
       }
+    }
+  }
+
+  @include breakpoint-md {
+    .content {
+      gap: 48px;
+      grid-template-columns: 2fr 3fr;
     }
   }
 }

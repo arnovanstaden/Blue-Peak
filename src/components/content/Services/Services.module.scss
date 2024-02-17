@@ -5,7 +5,7 @@
 
   .card {
     display: grid;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 1fr;
     gap: 48px;
     width: 100%;
 
@@ -53,6 +53,7 @@
         display: flex;
         align-items: center;
         gap: 16px;
+        flex-shrink: 0;
 
         svg {
           width: 12px;
@@ -62,6 +63,12 @@
           }
         }
       }
+    }
+  }
+
+  @include breakpoint-md {
+    .card {
+      grid-template-columns: 2fr 3fr;
     }
   }
 }

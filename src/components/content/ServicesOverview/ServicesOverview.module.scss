@@ -2,7 +2,7 @@
   .content {
     .cardGrid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: 24px;
 
       .card {
@@ -41,6 +41,13 @@
           }
         }
       }
+    }
+  }
+
+  @include breakpoint-md {
+    .content {
+      gap: 48px;
+      grid-template-columns: 1fr 1fr;
     }
   }
 }

@@ -3,6 +3,8 @@
   flex-direction: column;
   height: fit-content;
   margin-bottom: 48px;
+  align-items: center;
+  text-align: center;
 
   h2 {
     font-weight: 400;
@@ -21,5 +23,10 @@
   &.centerAlign {
     align-items: center;
     text-align: center;
+  }
+
+  @include breakpoint-md {
+    align-items: unset;
+    text-align: unset;
   }
 }

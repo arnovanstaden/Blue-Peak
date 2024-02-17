@@ -1,13 +1,19 @@
 .About {
   .content {
     display: grid;
-    grid-template-columns: 2fr 3fr;
-    gap: 48px;
+    grid-template-columns: 1fr;
 
     .text {
       display: grid;
       gap: 24px;
       color: var(--colour-font-secondary);
+    }
+  }
+
+  @include breakpoint-md {
+    .content {
+      gap: 48px;
+      grid-template-columns: 2fr 3fr;
     }
   }
 }
