@@ -4,13 +4,14 @@ import styles from './Card.module.scss';
 
 interface Props {
   className?: string;
+  id?: string;
 }
 
-const { className } = Astro.props;
+const { className, id } = Astro.props;
 
 const classes = classNames(styles.Card, className);
 ---
 
-<article class={classes}>
+<article class={classes} id={id}>
   <slot />
 </article>

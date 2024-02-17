@@ -19,19 +19,23 @@ import { Image } from 'astro:assets';
       <div class={styles.cardGrid}>
         {
           servicesData.map((service) => (
-            <Card className={styles.card}>
-              <h3>{service.name}</h3>
-              <h4>{service.description}</h4>
-              <div class={styles.image}>
-                <Image
-                  loading='lazy'
-                  src={service.image}
-                  alt='Gas Stove'
-                  width={600}
-                  height={600}
-                />
-              </div>
-            </Card>
+            <a
+              href={`/services#${service.name.toLowerCase().replace(/ /g, '-')}`}
+            >
+              <Card className={styles.card}>
+                <h3>{service.name}</h3>
+                <h4>{service.description}</h4>
+                <div class={styles.image}>
+                  <Image
+                    loading='lazy'
+                    src={service.image}
+                    alt='Gas Stove'
+                    width={600}
+                    height={600}
+                  />
+                </div>
+              </Card>
+            </a>
           ))
         }
       </div>

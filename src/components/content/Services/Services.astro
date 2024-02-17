@@ -18,7 +18,10 @@ import EmergencyCard from '../EmergencyCard/EmergencyCard.astro';
     <div class={styles.ServicesGrid}>
       {
         servicesData.map((service) => (
-          <Card className={styles.card}>
+          <Card
+            className={styles.card}
+            id={service.name.toLowerCase().replace(/ /g, '-')}
+          >
             <div class={styles.left}>
               <h3>{service.name}</h3>
               <h4>{service.description}</h4>
