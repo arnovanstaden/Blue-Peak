@@ -41,7 +41,7 @@ const MobileNav = () => {
         <nav>
           <a href='/'>Home</a>
           <a href='/services'>Services</a>
-          <a href='/services'>Contact Us</a>
+          <a href='/contact'>Contact</a>
         </nav>
       </div>
     </div>

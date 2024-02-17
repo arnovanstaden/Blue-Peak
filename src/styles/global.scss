@@ -41,8 +41,12 @@ p {
 }
 
 section {
-  padding: 92px 0;
+  padding: 60px 0;
   width: 100%;
+
+  @include breakpoint-md {
+    padding: 92px 0;
+  }
 }
 
 svg {
