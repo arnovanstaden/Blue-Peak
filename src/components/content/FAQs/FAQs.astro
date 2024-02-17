@@ -41,11 +41,27 @@ import Card from '@components/UI/Card/Card.astro';
 <script>
   // Find our component DOM on the page.
   import styles from './FAQs.module.scss';
-  const faqCards = document.querySelectorAll(`.${styles.card}`);
 
-  faqCards.forEach((card) => {
-    card.addEventListener('click', () => {
-      card.classList.toggle(styles.open);
+  const handleEvents = () => {
+    const faqCards = document.querySelectorAll(`.${styles.card}`);
+
+    faqCards.forEach((card) => {
+      card.addEventListener('click', () => {
+        card.classList.toggle(styles.open);
+      });
     });
+  };
+
+  document.addEventListener(
+    'astro:page-load',
+    () => {
+      // This only runs once.
+      handleEvents();
+    },
+    { once: true }
+  );
+
+  document.addEventListener('astro:after-swap', () => {
+    handleEvents(); // Used for subsequent navigations
   });
 </script>
