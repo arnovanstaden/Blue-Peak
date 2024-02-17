@@ -10,13 +10,12 @@
   --colour-font: var(--colour-accent);
   --colour-font-secondary: var(--colour-tertiary);
   --colour-background: var(--colour-white);
-  --colour-on-colour: #fbfbfb;
+  --colour-on-colour: var(--colour-white);
 
   @media screen and (prefers-color-scheme: dark) {
     --colour-container: #252733;
     --colour-font: var(--colour-white);
     --colour-font-secondary: var(--colour-quarternary);
     --colour-background: var(--colour-accent);
-    --colour-on-colour: #1c1e27;
   }
 }

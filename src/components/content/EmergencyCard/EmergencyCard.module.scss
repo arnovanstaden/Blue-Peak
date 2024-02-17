@@ -10,6 +10,9 @@
 
   .heading {
     margin-bottom: 0;
+    * {
+      color: var(--colour-on-colour);
+    }
   }
 
   @include breakpoint-md {
