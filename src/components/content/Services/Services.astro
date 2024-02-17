@@ -1,0 +1,54 @@
+---
+import styles from './Services.module.scss';
+import Card from '@components/UI/Card/Card.astro';
+import Container from '@components/UI/Container/Container.astro';
+import SectionHeading from '@components/UI/SectionHeading/SectionHeading.astro';
+import { Image } from 'astro:assets';
+import servicesData from './Services.data';
+---
+
+<section>
+  <Container>
+    <SectionHeading
+      heading='What we can do for you'
+      subheading='Our Services'
+      centerAlign
+    />
+    <div class={styles.ServicesGrid}>
+      {
+        servicesData.map((service) => (
+          <Card className={styles.card}>
+            <div class={styles.left}>
+              <h3>{service.name}</h3>
+              <h4>{service.description}</h4>
+              <div class={styles.image}>
+                <Image
+                  loading='lazy'
+                  src={service.image}
+                  alt='Gas Stove'
+                  width={600}
+                  height={600}
+                />
+              </div>
+            </div>
+            <ul class={styles.list}>
+              {service.services.map((s) => (
+                <li>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    height='24'
+                    viewBox='0 -960 960 960'
+                    width='24'
+                  >
+                    <path d='M120-120v-720h720v720H120Z' />
+                  </svg>
+                  {s}
+                </li>
+              ))}
+            </ul>
+          </Card>
+        ))
+      }
+    </div>
+  </Container>
+</section>

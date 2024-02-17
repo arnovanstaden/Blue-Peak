@@ -3,7 +3,7 @@ import styles from './ServicesOverview.module.scss';
 import Container from '@components/UI/Container/Container.astro';
 import SectionHeading from '@components/UI/SectionHeading/SectionHeading.astro';
 import Card from '@components/UI/Card/Card.astro';
-import servicesOverviewData from './ServicesOverview.data';
+import servicesData from '@components/content/Services/Services.data';
 import { Image } from 'astro:assets';
 ---
 
@@ -17,7 +17,7 @@ import { Image } from 'astro:assets';
       />
       <div class={styles.cardGrid}>
         {
-          servicesOverviewData.map((service) => (
+          servicesData.map((service) => (
             <Card className={styles.card}>
               <h3>{service.name}</h3>
               <h4>{service.description}</h4>
