@@ -11,6 +11,7 @@
   border-width: 1px;
   font-weight: 500;
   align-items: center;
+  gap: 8px;
 
   &.variant {
     &-contained {
@@ -25,7 +26,7 @@
             border-color: var(--colour-font);
             color: var(--colour-primary);
 
-            * {
+            svg * {
               fill: var(--colour-primary);
             }
           }
@@ -36,12 +37,16 @@
           border-color: var(--colour-font);
           color: var(--colour-background);
 
+          svg * {
+            fill: var(--colour-background);
+          }
+
           &:hover {
             background-color: var(--colour-primary);
             border-color: var(--colour-primary);
             color: var(--colour-font);
 
-            * {
+            svg * {
               fill: var(--colour-font);
             }
           }
@@ -56,11 +61,15 @@
           color: var(--colour-primary);
           border-color: var(--colour-primary);
 
+          svg * {
+            fill: var(--colour-primary);
+          }
+
           &:hover {
             color: var(--colour-font);
             border-color: var(--colour-font);
 
-            * {
+            svg * {
               fill: var(--colour-font);
             }
           }
@@ -75,7 +84,7 @@
             color: var(--colour-primary);
             border-color: var(--colour-primary);
 
-            * {
+            svg * {
               fill: var(--colour-primary);
             }
           }

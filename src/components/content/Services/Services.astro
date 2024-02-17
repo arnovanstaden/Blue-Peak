@@ -5,6 +5,7 @@ import Container from '@components/UI/Container/Container.astro';
 import SectionHeading from '@components/UI/SectionHeading/SectionHeading.astro';
 import { Image } from 'astro:assets';
 import servicesData from './Services.data';
+import EmergencyCard from '../EmergencyCard/EmergencyCard.astro';
 ---
 
 <section>
@@ -49,6 +50,7 @@ import servicesData from './Services.data';
           </Card>
         ))
       }
+      <EmergencyCard />
     </div>
   </Container>
 </section>

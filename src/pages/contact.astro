@@ -6,6 +6,7 @@ import FAQs from '@components/content/FAQs/FAQs.astro';
 import Card from '@components/UI/Card/Card.astro';
 import Container from '@components/UI/Container/Container.astro';
 import SectionHeading from '@components/UI/SectionHeading/SectionHeading.astro';
+import EmergencyCard from '@components/content/EmergencyCard/EmergencyCard.astro';
 ---
 
 <Layout
@@ -19,6 +20,7 @@ import SectionHeading from '@components/UI/SectionHeading/SectionHeading.astro';
         subheading='So you want to get in touch'
         centerAlign
       />
+      <EmergencyCard />
       <Card className={styles.contactCard}>
         <ContactSection />
       </Card>

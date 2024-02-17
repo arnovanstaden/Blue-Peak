@@ -6,15 +6,16 @@ interface Props {
   heading: string;
   subheading: string;
   centerAlign?: boolean;
+  className?: string;
 }
 
-const { heading, subheading, centerAlign } = Astro.props;
+const { heading, subheading, centerAlign, className } = Astro.props;
 
 const classes = classNames(
-styles.SectionHeading,
-centerAlign && styles.centerAlign,
+  styles.SectionHeading,
+  centerAlign && styles.centerAlign,
+  className
 );
-
 ---
 
 <header class={classes}>

@@ -18,6 +18,7 @@
       color: var(--colour-font);
       transition: 0.3s ease-out;
       font-size: 15px;
+      border-radius: 0;
 
       &::placeholder {
         color: var(--colour-font);
@@ -36,10 +37,12 @@
   }
 
   @include breakpoint-md {
-    grid-template-columns: 1fr 1fr;
+    form {
+      grid-template-columns: 1fr 1fr;
 
-    textarea {
-      grid-column: 1/3;
+      textarea {
+        grid-column: 1/3;
+      }
     }
   }
 }

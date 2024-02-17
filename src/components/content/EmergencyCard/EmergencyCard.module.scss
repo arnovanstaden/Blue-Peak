@@ -1,0 +1,21 @@
+.EmergencyCard {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr;
+  background-color: var(--colour-primary);
+  gap: 32px;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+
+  .heading {
+    margin-bottom: 0;
+  }
+
+  @include breakpoint-md {
+    grid-template-columns: 1fr auto;
+    text-align: left;
+    justify-content: unset;
+    justify-items: unset;
+  }
+}

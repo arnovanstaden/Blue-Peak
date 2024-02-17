@@ -33,6 +33,10 @@
   @include breakpoint-md {
     grid-template-columns: repeat(3, 1fr);
 
+    .mobileNav {
+      display: none;
+    }
+
     nav {
       display: flex;
       justify-content: center;

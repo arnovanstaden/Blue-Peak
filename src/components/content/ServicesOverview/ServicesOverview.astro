@@ -4,12 +4,13 @@ import Container from '@components/UI/Container/Container.astro';
 import SectionHeading from '@components/UI/SectionHeading/SectionHeading.astro';
 import Card from '@components/UI/Card/Card.astro';
 import servicesData from '@components/content/Services/Services.data';
+import EmergencyCard from '@components/content/EmergencyCard/EmergencyCard.astro';
 import { Image } from 'astro:assets';
 ---
 
-<section>
+<section class={styles.ServicesOverview}>
   <Container>
-    <div class={styles.ServicesOverview}>
+    <div>
       <SectionHeading
         heading='What we can do for you'
         subheading='Our Services'
@@ -34,6 +35,7 @@ import { Image } from 'astro:assets';
           ))
         }
       </div>
+      <EmergencyCard />
     </div>
   </Container>
 </section>
