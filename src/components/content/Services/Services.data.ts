@@ -39,7 +39,7 @@ export const servicesData = [
     services: [
       'Gas Certificate of Compliance.',
       'Installation of all Gas Appliances',
-      'Water Heaters',
+      'Gas Geysers',
       'Stoves',
       'Fireplaces',
       'Gas leaks'
