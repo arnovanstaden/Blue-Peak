@@ -1,0 +1,57 @@
+.MobileNav {
+  display: block;
+
+  button {
+    @include reset-button;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 0;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+    z-index: 10;
+    gap: 2rem;
+    padding: 2rem 0;
+    background-color: var(--colour-container);
+
+    .closeButton {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      font-size: 1.4rem;
+      cursor: pointer;
+      padding: 0.1rem;
+    }
+
+    nav {
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+  }
+
+  &.open {
+    .drawer {
+      width: 75vw;
+    }
+  }
+
+  @include breakpoint-md {
+    display: none;
+  }
+}

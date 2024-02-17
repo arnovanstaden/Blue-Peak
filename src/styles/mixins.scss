@@ -34,3 +34,11 @@
   justify-content: center;
   align-items: center;
 }
+
+@mixin reset-button {
+  background-color: unset;
+  border: none;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+}

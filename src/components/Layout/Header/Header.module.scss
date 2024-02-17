@@ -22,7 +22,7 @@
     }
   }
 
-  nav {
+  .desktopNav {
     display: none;
   }
 
@@ -33,11 +33,7 @@
   @include breakpoint-md {
     grid-template-columns: repeat(3, 1fr);
 
-    .mobileNav {
-      display: none;
-    }
-
-    nav {
+    .desktopNav {
       display: flex;
       justify-content: center;
       gap: 24px;

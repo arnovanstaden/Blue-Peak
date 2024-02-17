@@ -2,6 +2,7 @@
 import styles from './Header.module.scss';
 import Container from '@components/UI/Container/Container.astro';
 import Button from '@components/UI/Button/Button.astro';
+import MobileNav from '@components/Layout/MobileNav/MobileNav';
 ---
 
 <header>
@@ -11,24 +12,14 @@ import Button from '@components/UI/Button/Button.astro';
         <img src='/static/logos/logo.svg' alt='Logo' />
         <p>Blue Peak</p>
       </a>
-      <nav>
+      <nav class={styles.desktopNav}>
         <a href='/'>Home</a>
         <a href='/services'>Services</a>
       </nav>
       <div class={styles.cta}>
         <Button href='/contact'> Get in Touch </Button>
       </div>
-      <div class={styles.mobileNav}>
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          height='24'
-          viewBox='0 -960 960 960'
-          width='24'
-          ><path
-            d='M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z'
-          ></path></svg
-        >
-      </div>
+      <MobileNav client:load />
     </div>
   </Container>
 </header>
