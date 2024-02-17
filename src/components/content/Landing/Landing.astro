@@ -1,6 +1,8 @@
 ---
 import styles from './Landing.module.scss';
 import Button from '@components/UI/Button/Button.astro';
+import BackgoundImage from '@static/images/background.png';
+import { Image } from 'astro:assets';
 ---
 
 <section class={styles.Landing}>
@@ -12,5 +14,8 @@ import Button from '@components/UI/Button/Button.astro';
     <Button colour='primary' withArrow href='/contact'>
       Let's fix your problem
     </Button>
+  </div>
+  <div class={styles.image}>
+    <Image loading='eager' src={BackgoundImage} alt='Mountain' />
   </div>
 </section>
