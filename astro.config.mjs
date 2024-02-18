@@ -21,7 +21,13 @@ export default defineConfig({
     }
   },
   site: 'https://www.blue-peak.co.za',
-  integrations: [react(), sitemap()],
+  integrations: [
+    react(), 
+    sitemap({
+    changefreq: 'monthly',
+    priority: 0.7,
+    lastmod: new Date(),
+  })],
   output: 'hybrid',
   adapter: vercel()
 });
