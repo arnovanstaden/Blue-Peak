@@ -17,7 +17,7 @@ const MobileNav = () => {
 
   return (
     <div className={classes} ref={navRef}>
-      <button onClick={toggleNav}>
+      <button onClick={toggleNav} aria-label='Open Mobile Navigation'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           height='24'
@@ -28,7 +28,7 @@ const MobileNav = () => {
         </svg>
       </button>
       <div className={styles.drawer}>
-        <button onClick={toggleNav} className={styles.closeButton}>
+        <button onClick={toggleNav} className={styles.closeButton} aria-label='Close Mobile Navigation'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             height='24'

@@ -1,5 +1,5 @@
 .Header {
-  padding-top: 32px;
+  padding-top: 8px;
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
@@ -32,6 +32,7 @@
 
   @include breakpoint-md {
     grid-template-columns: repeat(3, 1fr);
+    padding-top: 32px;
 
     .desktopNav {
       display: flex;
