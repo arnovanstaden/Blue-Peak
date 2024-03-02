@@ -7,6 +7,7 @@ import TikTokIcon from '@static/icons/tiktok.svg?raw';
 import whatsappIcon from '@static/icons/whatsapp.svg?raw';
 import emailIcon from '@static/icons/email.svg?raw';
 import phoneIcon from '@static/icons/phone.svg?raw';
+import locationIcon from '@static/icons/location.svg?raw';
 import SectionHeading from '@components/UI/SectionHeading/SectionHeading.astro';
 
 interface Props {
@@ -38,6 +39,14 @@ const { withSectionHeading } = Astro.props;
       <a href='mailto:info@blue-peak.co.za'>
         <Fragment set:html={emailIcon} />
         info@blue-peak.co.za
+      </a>
+      <a href='https://maps.app.goo.gl/rrWPkbwmR5QTcyF37' target='_blank'>
+        <Fragment set:html={locationIcon} />
+        <div class={styles.address}>
+          <p>76 Edward Road, Belville</p>
+          <p>7530, Western Cape</p>
+          <p>South Africa</p>
+        </div>
       </a>
     </div>
     <div class={styles.social}>
