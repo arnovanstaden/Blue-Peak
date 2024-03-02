@@ -43,6 +43,11 @@
       }
     }
 
+    .address {
+      display: block;
+      text-align: center;
+    }
+
     .social {
       display: flex;
       gap: 1rem;
@@ -63,6 +68,10 @@
     .details {
       .contact a {
         justify-content: left;
+      }
+
+      .address {
+        text-align: left;
       }
 
       .social {
